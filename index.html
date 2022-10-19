@@ -1,0 +1,117 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="en">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>Lesson_12</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="css/style.css" />
+
+	<!-- Кодировка страницы -->
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+</head>
+<!-- Отображаемое тело страницы -->
+
+
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<ul class="header__menu menu">
+					<li class="menu__item">
+						<a href="" class="menu__link ">Wheels</a>
+						<ul class="sub-menu">
+							<li class="sub-menu__item">
+								<a href="#bbs" class="sub-menu__link">BBS</a>
+							</li>
+							<li class="sub-menu__item">
+								<a href="#rsz" class="sub-menu__link">Work RSZ</a>
+							</li>
+							<li class="sub-menu__item">
+								<a href="#bmw" class="sub-menu__link">BMW</a>
+							</li>
+							<li class="sub-menu__item">
+								<a href="#momo" class="sub-menu__link">MOMO</a>
+							</li>
+							<li class="sub-menu__item">
+								<a href="#5zigen" class="sub-menu__link">5 Zigen</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu__item">
+						<a href="" class="menu__link">Paint</a>
+						<ul class="sub-menu">
+							<li class="sub-menu__item">
+								<a href="#chrome" class="sub-menu__link">Chrome</a>
+							</li>
+							<li class="sub-menu__item">
+								<a href="#multicam" class="sub-menu__link">Haki</a>
+							</li>
+							<li class="sub-menu__item">
+								<a href="#red" class="sub-menu__link">Red</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu__item">
+						<a href="" class="menu__link">Shades</a>
+						<ul class="sub-menu">
+							<li class="sub-menu__item">
+								<a href="#redshade" class="sub-menu__link">Red</a>
+							</li>
+							<li class="sub-menu__item">
+								<a href="#greenshade" class="sub-menu__link">Green</a>
+							</li>
+							<li class="sub-menu__item">
+								<a href="#purpleshade" class="sub-menu__link">Purple</a>
+							</li>
+							<li class="sub-menu__item">
+								<a href="#yellowshade" class="sub-menu__link">Yellow</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<main class="page">
+			<section class="page__main main">
+				<div class="main__container">
+					<div class="main__body body">
+						<div class="body__garage ibg"><img src="img/garage.png" alt="garage"></div>
+						<div class="body__logo"><img src="img/logo.png" alt="logo"></div>
+						<audio src="/music/riders.mp3" controls class="body__music"></audio>
+						<div class="body__car car">
+							<div class="car__gear car__gear--silver"><img src="img/bmw_silver.png" alt="silver"></div>
+							<div id="red" class="car__gear car__gear--red"><img src="img/bmw_red.png" alt="red"></div>
+							<div id="multicam" class="car__gear car__gear--haki"><img src="img/bmw_haki.png" alt="haki"></div>
+							<div id="chrome" class="car__gear car__gear--chrome"><img src="img/bmw_chrome.png" alt="chrome">
+							</div>
+							<div class="car__wheels car__wheels--left"><img src="img/wheel_left.png" alt="left"></div>
+							<div class="car__wheels car__wheels--right"><img src="img/wheel_right.png" alt="right"></div>
+							<div id="bbs" class="car__wheels-upgrade car__wheels-upgrade--bbs"><img src="img/wheels_bbs.png"
+									alt="bbs"></div>
+							<div id="momo" class="car__wheels-upgrade car__wheels-upgrade--momo"><img src="img/wheels_momo.png"
+									alt="momo"></div>
+							<div id="bmw" class="car__wheels-upgrade car__wheels-upgrade--bmw"><img src="img/wheels_bmw.png"
+									alt="bmw"></div>
+							<div id="rsz" class="car__wheels-upgrade car__wheels-upgrade--rsz" alt="rsz"><img
+									src="img/wheels_WorkRSZ.png" alt="WorkRSZ"></div>
+							<div id="5zigen" class="car__wheels-upgrade car__wheels-upgrade--5zigen"><img
+									src="img/wheels_5zigen.png" alt="5zigen"></div>
+							<div id="redshade" class="car__shade car__shade--red"></div>
+							<div id="yellowshade" class="car__shade car__shade--yellow"></div>
+							<div id="purpleshade" class="car__shade car__shade--purple"></div>
+							<div id="greenshade" class="car__shade car__shade--green"></div>
+						</div>
+					</div>
+			</section>
+		</main>
+	</div>
+</body>
+
+</html>

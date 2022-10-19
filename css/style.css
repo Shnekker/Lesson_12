@@ -1,0 +1,386 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Lato:regular,700,900,&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+body {
+  font-family: "Lato";
+  color: #000000;
+  font-weight: 400;
+  background: rgb(243, 226, 199);
+  background: linear-gradient(to right, rgb(42, 6, 75) 0%, rgb(105, 15, 188) 50%, rgb(105, 15, 188) 51%, rgb(42, 6, 75) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#f3e2c7", endColorstr="#e9d4b3",GradientType=1 );
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  flex: 1 1 auto;
+}
+
+[class*=__container] {
+  max-width: 1270px;
+  margin: 0 auto;
+}
+
+.ibg {
+  position: relative;
+}
+.ibg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0px 30px 0px/20px;
+  box-shadow: 0px 0 50px 20px black;
+}
+
+.header {
+  position: fixed;
+  width: 110%;
+  top: 0;
+  left: 0;
+  padding: 35px;
+  z-index: 100;
+  min-height: 130px;
+  background: linear-gradient(to bottom, rgb(30, 87, 153) 0%, rgba(125, 185, 232, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#1e5799", endColorstr="#007db9e8",GradientType=0 );
+}
+.menu {
+  font-size: 0;
+}
+.menu__item {
+  display: inline-block;
+  position: relative;
+  perspective: 300px;
+}
+.menu__item:hover .sub-menu {
+  opacity: 1;
+  visibility: visible;
+  top: 110%;
+  border-radius: 5px 10px;
+  box-shadow: 0px 0px 30px 2px black;
+  transform: rotateX(180deg);
+}
+.menu__item:not(:last-child) {
+  margin-right: 50px;
+}
+.menu__link {
+  color: rgb(134, 94, 26);
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 20px;
+  font-family: "Permanent Marker";
+  transition: all 0.5s ease-out 0s;
+  text-shadow: 4px 4px 6px black;
+}
+.menu__link:hover {
+  color: #ff6022;
+  outline: 1px solid rgba(0, 128, 0, 0);
+  border-radius: 20px/100px;
+}
+
+.sub-menu {
+  position: absolute;
+  top: 150%;
+  left: 0;
+  min-width: 90px;
+  background-color: rgb(0, 112, 153);
+  text-align: center;
+  padding: 10px 0px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease 0s;
+}
+.sub-menu__item {
+  transform: rotateX(180deg);
+}
+.sub-menu__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.sub-menu__link {
+  font-size: 14px;
+  color: rgb(255, 208, 150);
+}
+.sub-menu__link:hover {
+  text-decoration: underline;
+  color: white;
+}
+.sub-menu__link:active {
+  color: #ff6022;
+}
+
+.body {
+  position: relative;
+}
+.body__logo {
+  position: absolute;
+  top: 2%;
+  right: 7%;
+  z-index: 120;
+  opacity: 0.8;
+}
+.body__logo img {
+  max-width: 100%;
+}
+.body__music {
+  position: absolute;
+  top: 4%;
+  right: 45%;
+  z-index: 120;
+  width: 110px;
+  opacity: 0.5;
+}
+.body__garage {
+  max-width: 1240px;
+  padding-bottom: 57%;
+}
+
+.car__gear {
+  position: absolute;
+  bottom: 12%;
+  right: 15%;
+  width: 925px;
+  z-index: 50;
+}
+.car__gear img {
+  max-width: 100%;
+}
+.car__gear--red {
+  position: absolute;
+  bottom: 12.5%;
+  right: 13%;
+  width: 952px;
+  z-index: 50;
+  display: none;
+}
+.car__gear--red:target {
+  display: block;
+}
+.car__gear--haki {
+  position: absolute;
+  bottom: 11%;
+  right: 13%;
+  width: 955px;
+  z-index: 50;
+  display: none;
+}
+.car__gear--haki:target {
+  display: block;
+}
+.car__gear--chrome {
+  position: absolute;
+  bottom: 11%;
+  right: 13%;
+  width: 955px;
+  z-index: 50;
+  display: none;
+}
+.car__gear--chrome:target {
+  display: block;
+}
+.car__wheels--left {
+  position: absolute;
+  bottom: 6%;
+  left: 16.5%;
+  width: 170px;
+  z-index: 2;
+}
+.car__wheels--left:after {
+  content: "";
+  border-radius: 100px;
+  width: 750px;
+  position: absolute;
+  box-shadow: 0px -18px 50px 62px black;
+  left: 15%;
+  top: 85%;
+  z-index: -1;
+}
+.car img {
+  max-width: 100%;
+}
+.car__wheels--right {
+  position: absolute;
+  bottom: 5%;
+  right: 24%;
+  width: 170px;
+  z-index: 2;
+}
+.car__wheels--right img {
+  max-width: 100%;
+}
+.car__wheels-upgrade {
+  position: absolute;
+  bottom: 6%;
+  right: 24%;
+  width: 748px;
+  z-index: 2;
+}
+.car__wheels-upgrade img {
+  max-width: 100%;
+}
+.car__wheels-upgrade--bbs {
+  display: none;
+}
+.car__wheels-upgrade--bbs:target {
+  display: block;
+}
+.car__wheels-upgrade--momo {
+  display: none;
+}
+.car__wheels-upgrade--momo:target {
+  display: block;
+}
+.car__wheels-upgrade--bmw {
+  position: absolute;
+  bottom: 6%;
+  right: 24.5%;
+  width: 745px;
+  display: none;
+}
+.car__wheels-upgrade--bmw:target {
+  display: block;
+}
+.car__wheels-upgrade--rsz {
+  display: none;
+}
+.car__wheels-upgrade--rsz:target {
+  display: block;
+}
+.car__wheels-upgrade--5zigen {
+  display: none;
+}
+.car__wheels-upgrade--5zigen:target {
+  display: block;
+}
+.car__shade {
+  position: absolute;
+  bottom: 36%;
+  right: 36%;
+  width: 296px;
+  height: 70px;
+  z-index: 3;
+  border-radius: 30px;
+}
+.car__shade img {
+  max-width: 100%;
+}
+.car__shade--red {
+  background-color: rgba(239, 0, 0, 0.549);
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 1s ease 0s;
+}
+.car__shade--red:target {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.car__shade--yellow {
+  background-color: rgba(239, 239, 0, 0.549);
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 1s ease 0s;
+}
+.car__shade--yellow:target {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.car__shade--purple {
+  background-color: rgba(179, 0, 239, 0.549);
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 1s ease 0s;
+}
+.car__shade--purple:target {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.car__shade--green {
+  background-color: rgba(0, 202, 34, 0.549);
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 1s ease 0s;
+}
+.car__shade--green:target {
+  opacity: 1;
+  transform: translateY(0px);
+}
