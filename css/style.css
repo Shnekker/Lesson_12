@@ -125,6 +125,7 @@ body {
   background: linear-gradient(to bottom, rgb(30, 87, 153) 0%, rgba(125, 185, 232, 0) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#1e5799", endColorstr="#007db9e8",GradientType=0 );
 }
+
 .menu {
   font-size: 0;
 }
